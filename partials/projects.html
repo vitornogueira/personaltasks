@@ -1,0 +1,33 @@
+<style>
+	form {
+		margin-top: 20px;
+		padding: 20px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		background: #F0F0F0;
+		border: 1px solid #D2D2D2;
+	}
+</style>
+<article class="grid-4-12">
+	<form name="newItemForm">
+		<h1>Project: {{projectName}}</h1>
+		<div class="form-4-4">
+			<label for="new-item">New item: </label>
+			<input type="text" name="new-item" id="new-item" data-ng-model="newText" required>
+		</div>
+		<button data-ng-click="add()" class="fright" data-ng-disabled="isClean() || newItemForm.$invalid">Add</button>
+		<div class="clear"></div>
+	</form>
+</article>
+
+<article class="grid-8-12">
+	<h2>Itens to do</h2>
+	<p>Remaining {{ remaining() }} of {{ items.length }} <a href="" data-ng-click="archive()" data-ng-show="items.length">[archive]</a></p>
+	<ul>
+		<li data-ng-repeat="item in items" class="done-{{ item.done }}">
+			{{ item.text }}
+			<input type="checkbox" data-ng-model="item.done">
+		</li>
+	</ul>
+</article>

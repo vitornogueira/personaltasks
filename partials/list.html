@@ -1,0 +1,24 @@
+<article class="grid-9-12">
+	<h1>Welcome {{ user.name }}!</h1>
+	<h2 data-ng-show="projects.length">Projects List</h2>
+	<ul data-ng-show="projects.length" class="project-list">
+		<li data-ng-repeat="project in projects" class="item-{{ project.color }}">
+			<a href="http://localhost:8080/#/{{ user.url }}/{{ project.url }}">{{ project.name }} <span>{{ project.last }}/{{ project.qtdItem }}</span></a>
+			<!-- <span> {{ project.perc }} </span>
+			<span data-ng-hide="project.status">Finalizado</span><span data-ng-show="project.status">Em andamento</span> -->
+		</li>
+	</ul>
+	<p data-ng-hide="projects.length">No projects :(</p>
+</article>
+
+<article class="grid-3-12">
+	<form name="newProjectForm">
+		<h1>New Project</h1>
+		<div class="form-4-4">
+			<label for="project">Name: </label>
+			<input type="text" name="project" id="project" data-ng-model="newText" required>
+		</div>
+		<button data-ng-click="add()" class="fright" data-ng-disabled="isClean() || newProjectForm.$invalid">Add</button>
+		<div class="clear"></div>
+	</form>
+</article>
