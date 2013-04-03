@@ -3,7 +3,7 @@
 	<h2 data-ng-show="projects.length">Projects List</h2>
 	<ul data-ng-show="projects.length" class="project-list">
 		<li data-ng-repeat="project in projects" class="item-{{ project.color }}">
-			<a href="http://localhost:8080/#/{{ user.url }}/{{ project.url }}">{{ project.name }} <span>{{ project.last }}/{{ project.qtdItem }}</span></a>
+			<a href="#/{{ user.url }}/{{ project.url }}">{{ project.name }} <span>{{ project.last }}/{{ project.qtdItem }}</span></a>
 		</li>
 	</ul>
 	<p data-ng-hide="projects.length">No projects :(</p>
