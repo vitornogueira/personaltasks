@@ -58,6 +58,14 @@ section {
 	margin: 0 auto;
 }
 
+form {
+	margin-top: 20px;
+	padding: 20px;
+	@include box-sizing;
+	background: #F0F0F0;
+	border: 1px solid #D2D2D2;
+}
+
 .project-list {
 	width: 30%;
 	margin: 0;

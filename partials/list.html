@@ -4,8 +4,6 @@
 	<ul data-ng-show="projects.length" class="project-list">
 		<li data-ng-repeat="project in projects" class="item-{{ project.color }}">
 			<a href="http://localhost:8080/#/{{ user.url }}/{{ project.url }}">{{ project.name }} <span>{{ project.last }}/{{ project.qtdItem }}</span></a>
-			<!-- <span> {{ project.perc }} </span>
-			<span data-ng-hide="project.status">Finalizado</span><span data-ng-show="project.status">Em andamento</span> -->
 		</li>
 	</ul>
 	<p data-ng-hide="projects.length">No projects :(</p>
