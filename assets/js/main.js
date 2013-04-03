@@ -41,9 +41,11 @@ function ListCtrl($scope, $routeParams) {
 	}
 
 	for (i in apps) {
-		var app = JSON.parse(localStorage.getItem(apps[i].name)),
+		var app = JSON.parse(localStorage.getItem(apps[i].url)),
 			q = 0,
 			perc = 0;
+
+		console.log(app);
 
 		q = app.reduce(function(count, item) {
 			return item.done ? count : count + 1;
