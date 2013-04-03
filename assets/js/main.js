@@ -36,7 +36,7 @@ function ListCtrl($scope, $routeParams) {
 		user = JSON.parse(localStorage.getItem('user'));
 
 	if (!user || user.url !== $routeParams.user) {
-		window.location = "http://localhost:8080/#/"
+		window.location = "http://vitornogueira.github.com/personaltasks/#/"
 		return false;
 	}
 
@@ -80,7 +80,7 @@ function ListCtrl($scope, $routeParams) {
 		localStorage.setItem('projects', JSON.stringify(apps));
 		localStorage.setItem(appUrl, JSON.stringify([]));
 
-		window.location = "http://localhost:8080/#/" + user.url + "/" + appUrl
+		window.location = "http://vitornogueira.github.com/personaltasks/#/" + user.url + "/" + appUrl
 	};
 
 }
@@ -100,7 +100,7 @@ function ProjectCtrl($scope, $routeParams) {
 		}
 	}
 
-	if (!passou) window.location = "http://localhost:8080/#/";
+	if (!passou) window.location = "http://vitornogueira.github.com/personaltasks/#/";
 
 	document.title = "Personal Tasks | " + $scope.projectName
 
@@ -142,7 +142,7 @@ function UserVerifyCtrl($scope, $routeParams) {
 	var user = JSON.parse(localStorage.getItem('user'));
 
 	if (user) {
-		window.location = "http://localhost:8080/#/" + user.url
+		window.location = "http://vitornogueira.github.com/personaltasks/#/" + user.url
 		document.title = "Personal Tasks | " + user.name
 	}
 
@@ -154,7 +154,7 @@ function UserVerifyCtrl($scope, $routeParams) {
 
 		localStorage.setItem('user', JSON.stringify(user));
 
-		window.location = "http://localhost:8080/#/" + user.url
+		window.location = "http://vitornogueira.github.com/personaltasks/#/" + user.url
 	};
 
 }
