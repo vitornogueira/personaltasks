@@ -1,0 +1,7 @@
+<h1>Welcome</h1>
+<h2>Type a name for new user</h2>
+<form name="newUserForm">
+	<label for="user">User: </label>
+	<input type="text" name="user" id="user" data-ng-model="newText" required>
+	<button data-ng-click="add()" data-ng-disabled="isClean() || newUserForm.$invalid">Create</button>
+</form>

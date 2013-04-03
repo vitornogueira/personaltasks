@@ -1,0 +1,48 @@
+//===============
+// Posicionamento
+//===============
+.rel { position:relative; }
+
+.clear { clear: both; }
+
+.fleft,
+.fLeft { float: left; }
+
+.fright,
+.fRight { float: right; }
+
+.fnone,
+.fNone { float: none; }
+
+.dblock,
+.dBlock { display: block; }
+
+.dinblock,
+.dInBlock { display: inline-block; }
+
+.vhidden,
+.vHidden { visibility: hidden; }
+
+.dhidden,
+.dHidden { display: none; }
+
+.ofwauto,
+.ofwAuto { overflow: auto; }
+
+//=============
+// Texto
+//=============
+.txtupper,
+.txtUpper { text-transform: uppercase; }
+
+.txtcenter,
+.txtCenter { text-align:center; }
+
+.txtleft,
+.txtLeft { text-align: left; }
+
+.txtright,
+.txtRight { text-align: right; }
+
+.txtbold,
+.txtBold { font-weight: bold; }

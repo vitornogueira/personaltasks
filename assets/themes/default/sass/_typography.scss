@@ -1,0 +1,98 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0.2em 0 0.3em;
+	font-weight: normal;
+	line-height: 1.4;
+	text-rendering: optimizeLegibility;
+	color: $baseFontColor;
+}
+
+h1 { font-size: emCalc($sizeH1); }
+
+h2 { font-size: emCalc($sizeH2); }
+
+h3 { font-size: emCalc($sizeH3); }
+
+h4 { font-size: emCalc($sizeH4); }
+
+h5 { font-size: emCalc($sizeH5); }
+
+h6 { font-size: emCalc($sizeH6); }
+
+p {
+	margin: 5px 0;
+	line-height: $baseLineHeight;
+}
+
+a {
+	text-decoration: none;
+	color: $baseLinkColor;
+	&:hover {
+		text-decoration: underline;
+		color: darken($baseLinkColor, 15%);
+	}
+}
+
+ol,
+ul {
+	margin-left: 1.235em;
+	line-height: $baseLineHeight;
+}
+
+ol li > ol,
+ul li > ul {
+	margin-left: 1.235em;
+	list-style: inherit;
+	font-size: inherit;
+}
+
+ul.inline {
+	margin: 0;
+	li {
+		@include inlineList();
+	}
+}
+
+ul.counter {
+	counter-reset: list;
+	li {
+		list-style: none;
+		&:before {
+			font-weight: bold;
+			counter-increment: list;
+			content: counters(list, ".") ". ";
+		}
+	}
+}
+
+dl {
+	line-height: $baseLineHeight;
+	dt {
+		font-weight: bold;
+	}
+	dl {
+		margin-left: 1.235em;
+	}
+}
+
+.theme-color { color: $themeColor; }
+
+.red-color { color: $red; }
+
+.green-color { color: $green; }
+
+.blue-color { color: $blue; }
+
+.yellow-color { color: $yellow; }
+
+.gray-color { color: $gray; }
+
+.text-left { text-align: left; }
+
+.text-center { text-align: center; }
+
+.text-right { text-align: right; }

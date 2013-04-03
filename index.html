@@ -1,0 +1,22 @@
+<!doctype html>
+<html data-ng-app="personaltasks">
+<head>
+	<meta charset="UTF-8">
+	<title>Personal Tasks</title>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans|Dosis|Source+Sans+Pro|Maven+Pro' rel='stylesheet' type='text/css'> -->
+	<link rel="stylesheet" href="assets/themes/default/css/style.css">
+</head>
+<body data-ng-controller="MenuController">
+	<header>
+		<a href="#/{{ user.url }}">Personal Tasks</a>
+		<nav class="link-menu-{{ menuopen }}">
+			<label for="menu">MENU</label><input type="checkbox" name="menu" id="menu" data-ng-model="menuopen" style="display: none;">
+		</nav>
+	</header>
+	<section ng-view></section>
+	<div class="container-menu menuopen-{{ menuopen }}"></div>
+	<footer>Vítor Nogueira | 2013 &copy;</footer>
+	<script src="assets/js/libs/angular.min.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>

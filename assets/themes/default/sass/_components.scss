@@ -1,0 +1,108 @@
+label {
+	display: block;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+input[type="text"] {
+	border: 1px solid #AAA;
+	width: 20%;
+	height: 30px;
+	padding: 0 0.2em;
+	font-family: $fontFamily;
+}
+
+input[type="text"]:focus {
+	border: 1px solid $themeColor;
+	box-shadow: 0 0 7px rgba($baseLinkColor, .5);
+	outline: none;
+}
+
+button {
+	height: 30px;
+	padding: 0 1em;
+	//@include gradient($themeColor);
+	background: $themeColor;
+	border: 1px solid $themeColor;
+	font-family: $fontFamily;
+	font-size: 16px;
+	color: #FFF;
+	cursor: pointer;
+	&:disabled {
+		$disabledColor: lighten($themeColor, 30%);
+		//@include gradient($disabledColor);
+		background: $disabledColor;
+		border: 1px solid $disabledColor;
+		cursor: default;
+	}
+}
+
+// GRID
+.grid-1-12,
+.grid-2-12,
+.grid-3-12,
+.grid-4-12,
+.grid-5-12,
+.grid-6-12,
+.grid-7-12,
+.grid-8-12,
+.grid-9-12,
+.grid-10-12,
+.grid-11-12,
+.grid-12-12 {
+	float: left;
+	position: relative;
+	margin: 0 1%;
+}
+
+.grid-1-12 { width: 6.333%; }
+
+.grid-2-12 { width: 14.666%; }
+
+.grid-3-12 { width: 23%; }
+
+.grid-4-12 { width: 31.333%; }
+
+.grid-5-12 { width: 39.666%; }
+
+.grid-6-12 { width: 48%; }
+
+.grid-7-12 { width: 56.333%; }
+
+.grid-8-12 { width: 64.666%; }
+
+.grid-9-12 { width: 73%; }
+
+.grid-10-12 { width: 81.333%; }
+
+.grid-11-12 { width: 89.666%; }
+
+.grid-12-12 { width: 98%; }
+
+form input[type="color"],
+form input[type="email"],
+form input[type="number"],
+form input[type="password"],
+form input[type="tel"],
+form input[type="url"],
+form input[type="text"],
+form select {
+	width: 100%;
+	@include box-sizing;
+}
+
+.form-1-4,
+.form-2-4,
+.form-3-4,
+.form-4-4 {
+	float: left;
+	margin: 0 1% 0.5em;
+}
+
+.form-1-4 { width: 23%; }
+
+.form-2-4 { width: 48%; }
+
+.form-3-4 { width: 73%; }
+
+.form-4-4 { width: 98%; }
